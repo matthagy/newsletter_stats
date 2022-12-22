@@ -1,8 +1,5 @@
-# Newsletters stats analysis
-
-This is a work-in-progress analysis of some of the newsletters that I subscribe to.
 Method details in [appendix](#methods).
-Source code at [TODO github link](TODO)
+Source code at [github.com/matthagy/newsletter_stats](https://github.com/matthagy/newsletter_stats).
 
 ## Flesh-Kincaid grade-level test
 
