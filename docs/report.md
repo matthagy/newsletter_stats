@@ -1,5 +1,4 @@
 Method details in [appendix](#methods).
-Source code at [github.com/matthagy/newsletter_stats](https://github.com/matthagy/newsletter_stats).
 
 ## Flesh-Kincaid grade-level test
 
@@ -68,7 +67,8 @@ TBD
 Posts and comments are fetched using [substack_client](https://github.com/matthagy/substack_client) as described in,
 [Developing a Substack client to fetch posts and comments](https://matthagy.substack.com/p/developing-a-custom-substack-front).
 The Flesh-Kincaid grade-level test is calculated using the [textstat](https://github.com/textstat/textstat) library.
-You can view the analysis in the Jupyter notebook [TODO](TODO).
+You can view the analysis in the Jupyter notebook 
+[analysis.ipynb](https://github.com/matthagy/newsletter_stats/blob/master/analysis.ipynb).
 
 ### Data
 
