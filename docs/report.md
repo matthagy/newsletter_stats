@@ -89,6 +89,7 @@ Data files on [github](TODO).
 Each record corresponds to one post and the columns are as follows.
 
 * `site` - Name of the newsletter
+* `date` - Date posted
 * `word_count` - Length of the post in words
 * `grade_level` - Flesh-Kincaid grade level
 * `comment_count` - Number of comments on post
