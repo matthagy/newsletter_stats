@@ -81,37 +81,37 @@ This is a work in progress and will soon be revised.
 ![Comment volume over time](fig/sb_comment_terms_likes_coeffs.png)
 
 | Term          | Coefficient |
-|:--------------|------------:|
-| miserable     |        4.62 |
-| demonstrate   |         3.6 |
-| trusted       |        3.47 |
-| baltimore     |        3.25 |
-| beings        |        3.19 |
-| visible       |        3.11 |
-| optimistic    |        3.04 |
-| georgia       |        2.99 |
-| public sector |        2.93 |
-| protest       |        2.83 |
-| mediocre      |        2.82 |
-| frustrated    |        2.81 |
-| uniquely      |        2.78 |
-| vibes         |        2.71 |
-| pronouns      |         2.7 |
-| reagan        |       -1.69 |
-| selection     |        -1.7 |
-| floor         |       -1.77 |
-| wind solar    |        -1.8 |
-| cultures      |       -1.81 |
-| end day       |       -1.84 |
-| bloomberg     |       -1.86 |
-| pro life      |       -1.89 |
-| fetterman     |       -1.94 |
-| instead just  |       -1.97 |
-| consciousness |       -1.99 |
-| gen           |          -2 |
-| connect       |          -2 |
-| sectors       |        -2.1 |
-| red states    |        -2.3 |
+|---------------|:------------|
+| miserable     | 4.62        |
+| demonstrate   | 3.6         |
+| trusted       | 3.47        |
+| baltimore     | 3.25        |
+| beings        | 3.19        |
+| visible       | 3.11        |
+| optimistic    | 3.04        |
+| georgia       | 2.99        |
+| public sector | 2.93        |
+| protest       | 2.83        |
+| mediocre      | 2.82        |
+| frustrated    | 2.81        |
+| uniquely      | 2.78        |
+| vibes         | 2.71        |
+| pronouns      | 2.7         |
+| reagan        | -1.69       |
+| selection     | -1.7        |
+| floor         | -1.77       |
+| wind solar    | -1.8        |
+| cultures      | -1.81       |
+| end day       | -1.84       |
+| bloomberg     | -1.86       |
+| pro life      | -1.89       |
+| fetterman     | -1.94       |
+| instead just  | -1.97       |
+| consciousness | -1.99       |
+| gen           | -2          |
+| connect       | -2          |
+| sectors       | -2.1        |
+| red states    | -2.3        |
 
 ## Appendix
 
