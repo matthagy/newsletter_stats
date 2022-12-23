@@ -58,7 +58,15 @@ distribution stats.
 
 ## Comment volume over time
 
-TBD
+Are subscribers commenting more or less over time?
+To answer that question, the following figure plots the number of comments for each post by date.
+
+
+![Comment volume over time](fig/comment_volume_time.png)
+
+Points correspond to individual posts and lines show the monthly average of comments/post.
+In computing that average, posts with zero comments are excluded because
+some authors disable comments for some of their posts.
 
 ## Appendix
 
