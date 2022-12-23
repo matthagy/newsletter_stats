@@ -61,12 +61,57 @@ distribution stats.
 Are subscribers commenting more or less over time?
 To answer that question, the following figure plots the number of comments for each post by date.
 
-
 ![Comment volume over time](fig/comment_volume_time.png)
 
 Points correspond to individual posts and lines show the monthly average of comments/post.
 In computing that average, posts with zero comments are excluded because
 some authors disable comments for some of their posts.
+
+## Key terms
+
+What makes subscribers like some comments more than others?
+Can we identify key terms that boost (or hinder) the number of likes?
+As a naive attempt to quantify that, a linear regression model is constructed
+relating term frequency in a comment to number of likes for that comment.
+The coefficient for each term quantifies its average contribution to likability.
+
+Here are some preliminary results for Slow Boring comments.
+This is a work in progress and will soon be revised.
+
+![Comment volume over time](fig/sb_comment_terms_likes_coeffs.png)
+
+| Term          | Coefficient |
+|:--------------|------------:|
+| miserable     |        4.62 |
+| demonstrate   |         3.6 |
+| trusted       |        3.47 |
+| baltimore     |        3.25 |
+| beings        |        3.19 |
+| visible       |        3.11 |
+| optimistic    |        3.04 |
+| georgia       |        2.99 |
+| public sector |        2.93 |
+| protest       |        2.83 |
+| mediocre      |        2.82 |
+| frustrated    |        2.81 |
+| uniquely      |        2.78 |
+| vibes         |        2.71 |
+| pronouns      |         2.7 |
+| reagan        |       -1.69 |
+| selection     |        -1.7 |
+| floor         |       -1.77 |
+| wind solar    |        -1.8 |
+| cultures      |       -1.81 |
+| end day       |       -1.84 |
+| bloomberg     |       -1.86 |
+| pro life      |       -1.89 |
+| fetterman     |       -1.94 |
+| instead just  |       -1.97 |
+| consciousness |       -1.99 |
+| gen           |          -2 |
+| connect       |          -2 |
+| sectors       |        -2.1 |
+| red states    |        -2.3 |
 
 ## Appendix
 
@@ -75,7 +120,7 @@ some authors disable comments for some of their posts.
 Posts and comments are fetched using [substack_client](https://github.com/matthagy/substack_client) as described in,
 [Developing a Substack client to fetch posts and comments](https://matthagy.substack.com/p/developing-a-custom-substack-front).
 The Flesh-Kincaid grade-level test is calculated using the [textstat](https://github.com/textstat/textstat) library.
-You can view the analysis in the Jupyter notebook 
+You can view the analysis in the Jupyter notebook
 [analysis.ipynb](https://github.com/matthagy/newsletter_stats/blob/master/analysis.ipynb).
 
 ### Data
