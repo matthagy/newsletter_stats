@@ -75,43 +75,21 @@ As a naive attempt to quantify that, a linear regression model is constructed
 relating term frequency in a comment to number of likes for that comment.
 The coefficient for each term quantifies its average contribution to likability.
 
-Here are some preliminary results for Slow Boring comments.
-This is a work in progress and will soon be revised.
 
-![Comment volume over time](fig/sb_comment_terms_likes_coeffs.png)
+![Coefficients of comment likes linear model](fig/term_coeffs.png)
 
-| Term          | Coefficient |
-|---------------|:------------|
-| miserable     | 4.62        |
-| demonstrate   | 3.6         |
-| trusted       | 3.47        |
-| baltimore     | 3.25        |
-| beings        | 3.19        |
-| visible       | 3.11        |
-| optimistic    | 3.04        |
-| georgia       | 2.99        |
-| public sector | 2.93        |
-| protest       | 2.83        |
-| mediocre      | 2.82        |
-| frustrated    | 2.81        |
-| uniquely      | 2.78        |
-| vibes         | 2.71        |
-| pronouns      | 2.7         |
-| reagan        | -1.69       |
-| selection     | -1.7        |
-| floor         | -1.77       |
-| wind solar    | -1.8        |
-| cultures      | -1.81       |
-| end day       | -1.84       |
-| bloomberg     | -1.86       |
-| pro life      | -1.89       |
-| fetterman     | -1.94       |
-| instead just  | -1.97       |
-| consciousness | -1.99       |
-| gen           | -2          |
-| connect       | -2          |
-| sectors       | -2.1        |
-| red states    | -2.3        |
+For each site, we compute the term count of all comments that are at least 50 words long
+and retain the top 10,000 most-frequent terms.
+Term counts are re-weighting using
+[term frequency–inverse document frequency](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
+ to better represent how important a term is to a comment.
+The tfidf scores are then normalized so that each term has a variance of one across all comments.
+Finally, comment likes are regressed against normalized tfidf scores using a linear model
+fit through stochastic gradient descent.
+
+For details on this type of text transformation see the 
+[Jupyter notebook](https://github.com/matthagy/slowboring_article_clusters/blob/master/analysis.ipynb)
+from the [Slow Boring Article Clusters](https://github.com/matthagy/slowboring_article_clusters) project.
 
 ## Appendix
 
