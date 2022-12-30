@@ -14,20 +14,20 @@ The distributional stats for the posts are as follows.
 
 | Newsletter     | Posts | Mean | Std | Min | 10% |  25% |  50% |  75% |  90% |  Max |
 |:---------------|------:|-----:|----:|----:|----:|-----:|-----:|-----:|-----:|-----:|
-| slowboring     |   579 |   11 | 1.2 | 7.6 | 9.6 | 10.2 | 10.8 | 11.7 | 12.4 | 15.3 |
-| noahpinion     |   507 | 10.3 | 1.3 | 5.4 | 8.7 |  9.5 | 10.3 | 11.1 |   12 |   15 |
-| freddiedeboer  |   613 |  9.9 |   2 | 3.8 | 7.6 |  8.7 |  9.9 | 11.2 | 12.3 | 17.8 |
+| slowboring     |   582 |   11 | 1.2 | 7.6 | 9.6 | 10.2 | 10.8 | 11.7 | 12.5 | 15.3 |
+| noahpinion     |   515 | 10.3 | 1.3 | 5.5 | 8.8 |  9.5 | 10.2 | 11.1 | 11.9 | 15.1 |
+| freddiedeboer  |   618 |  9.9 |   2 | 3.8 | 7.6 |  8.7 |  9.9 | 11.2 | 12.3 | 17.8 |
 | andrewsullivan |   275 |  8.8 |   1 | 4.5 | 7.6 |  8.4 |    9 |  9.4 |   10 | 11.7 |
 | commonsense    |   328 |  8.7 | 1.6 | 5.1 | 6.8 |  7.5 |  8.7 |  9.8 | 10.8 | 13.5 |
 
 And for comments
 
-| Newsletter    | Comments | Mean | Std | Min | 10% | 25% | 50% |  75% |  90% | Max |
-|:--------------|:---------|-----:|----:|----:|----:|----:|----:|-----:|-----:|----:|
-| slowboring    | 148,062  | 10.1 | 3.1 | 1.2 | 6.4 | 7.9 | 9.8 | 12.1 | 14.2 |  20 |
-| noahpinion    | 27,999   |  9.9 |   3 | 0.2 | 6.3 | 7.8 | 9.6 | 11.7 |   14 |  20 |
-| freddiedeboer | 65,091   |  9.4 | 3.1 | 0.9 | 5.7 | 7.2 | 9.1 | 11.3 | 13.7 |  20 |
-| commonsense   | 155,128  |  8.2 |   3 | 0.9 | 4.7 | 6.1 | 7.8 |  9.9 |   12 |  20 |
+| Newsletter    | Comments | Mean | Std |  Min | 10% | 25% | 50% |  75% |  90% | Max |
+|:--------------|:---------|-----:|----:|-----:|----:|----:|----:|-----:|-----:|----:|
+| slowboring    | 71,471   | 10.1 | 3.1 |  0.7 | 6.4 |   8 | 9.9 | 12.1 | 14.3 |  20 |
+| noahpinion    | 14,072   |  9.9 |   3 | -0.3 | 6.3 | 7.8 | 9.6 | 11.7 | 13.9 |  20 |
+| freddiedeboer | 29,607   |  9.4 | 3.1 |  0.5 | 5.7 | 7.2 | 9.1 | 11.4 | 13.6 |  20 |
+| commonsense   | 59,203   |  8.1 | 2.9 | -0.3 | 4.7 | 6.1 | 7.8 |  9.8 | 11.9 |  20 |
 
 You can find
 [examples](#example-comment-fk-scores)
@@ -49,12 +49,12 @@ Note that the x-axis is cutoff at 1000 comments/post because there are a few out
 with an exceptionally large number of comments is indicated in the following table of
 distribution stats.
 
-| Newsletter    | Posts |  Mean |   Std | Min |  10% |   25% |   50% |   75% |   90% |  Max |
-|:--------------|------:|------:|------:|----:|-----:|------:|------:|------:|------:|-----:|
-| commonsense   |   436 | 355.8 | 312.1 |   0 |    0 |  56.5 | 321.5 | 584.8 |   798 | 1641 |
-| slowboring    |   595 | 248.8 | 123.3 |   3 |  107 | 160.5 |   232 | 316.5 | 414.8 | 1034 |
-| noahpinion    |   519 |  53.9 |  42.4 |   0 | 15.8 |  25.5 |    41 |  71.5 |   106 |  268 |
-| freddiedeboer |   717 |  90.8 | 123.4 |   0 |    0 |     0 |    37 |   129 | 273.8 |  663 |
+| Newsletter    | Posts |  Mean |   Std | Min | 10% |  25% |   50% |   75% |   90% |  Max |
+|:--------------|------:|------:|------:|----:|----:|-----:|------:|------:|------:|-----:|
+| commonsense   |   436 | 355.8 | 312.2 |   0 |   0 | 56.5 | 321.5 | 584.8 |   798 | 1641 |
+| slowboring    |   600 | 247.7 | 123.7 |   2 | 107 |  160 | 231.5 | 316.2 | 413.3 | 1034 |
+| noahpinion    |   527 |  54.2 |  42.3 |   0 |  16 |   26 |    41 |  72.5 |   106 |  268 |
+| freddiedeboer |   722 |    91 | 123.4 |   0 |   0 |    0 |  37.5 | 129.8 | 274.8 |  663 |
 
 ## Comment volume over time
 
@@ -75,19 +75,18 @@ As a naive attempt to quantify that, a linear regression model is constructed
 relating term frequency in a comment to number of likes for that comment.
 The coefficient for each term quantifies its average contribution to likability.
 
-
 ![Coefficients of comment likes linear model](fig/term_coeffs.png)
 
 For each site, we compute the term count of all comments that are at least 50 words long
 and retain the top 10,000 most-frequent terms.
 Term counts are re-weighting using
 [term frequency–inverse document frequency](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
- to better represent how important a term is to a comment.
+to better represent how important a term is to a comment.
 The tfidf scores are then normalized so that each term has a variance of one across all comments.
 Finally, comment likes are regressed against normalized tfidf scores using a linear model
 fit through stochastic gradient descent.
 
-For details on this type of text transformation see the 
+For details on this type of text transformation see the
 [Jupyter notebook](https://github.com/matthagy/slowboring_article_clusters/blob/master/analysis.ipynb)
 from the [Slow Boring Article Clusters](https://github.com/matthagy/slowboring_article_clusters) project.
 
@@ -105,7 +104,7 @@ You can view the analysis in the Jupyter notebook
 
 A simple Python script extracts relevant public metadata about posts and comments.
 That is then augmented with the text-aggregation metrics of FK score and word count.
-Data files on [github](TODO).
+Data files on [github](https://github.com/matthagy/newsletter_stats/tree/master/data).
 
 #### posts.csv
 
@@ -119,12 +118,20 @@ Each record corresponds to one post and the columns are as follows.
 
 #### comments.csv
 
-A random sample of 10,000 comments for each newsletter.
 Each record corresponds to one comment and the columns are as follows.
 
-* `site` - Name of the newsletter
+* `site` - Abbreviated name of the newsletter
 * `word_count` - Length of the article in words
 * `grade_level` - Flesh-Kincaid grade level
+
+#### term_coeffs.csv
+
+The 50 largest and 50 smallest coefficients for a linear model of term 
+frequency to number of likes on a comment.
+
+* `site` - Name of the newsletter
+* `term` - Word or bigram
+* `coeff` - The coefficient for this term in a linear model
 
 ### Example comment FK scores
 
