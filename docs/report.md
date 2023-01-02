@@ -115,6 +115,7 @@ Each record corresponds to one post and the columns are as follows.
 * `word_count` - Length of the post in words
 * `grade_level` - Flesh-Kincaid grade level
 * `comment_count` - Number of comments on post
+* `likes` - Number of likes on post
 
 #### comments.csv
 
@@ -123,6 +124,7 @@ Each record corresponds to one comment and the columns are as follows.
 * `site` - Abbreviated name of the newsletter
 * `word_count` - Length of the article in words
 * `grade_level` - Flesh-Kincaid grade level
+* `likes` - Number of likes on comment
 
 #### term_coeffs.csv
 
